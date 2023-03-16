@@ -25,6 +25,19 @@ public class PowersOfTwo {
         return result;
     }
 
+/*
+best solutions
+static long[] powersOfTwo(int n) {
+    return rangeClosed(0, n).map(i -> (long) Math.pow(2, i)).toArray();
+  }
+
+
+long ret[] = new long[n + 1];
+    for (int i = 0; i <= n; i++) ret[i] = 1L << i;
+    return ret;
+*/
+
+
     public static void main(String[] args) {
         System.out.println(Arrays.toString(powersOfTwo(0)));
         System.out.println(Arrays.toString(powersOfTwo(1)));
