@@ -60,6 +60,11 @@ public class Welcome {
         if (!greetings.containsKey(language)) {
             return greetings.get("english");
         } else return greetings.get(language);
+
+        /*
+        Alternative solution
+        return map.getOrDefault(language, map.get("english"));
+        */
     }
 
     public static void main(String[] args) {
