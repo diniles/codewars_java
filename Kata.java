@@ -23,15 +23,15 @@ sunday = [6737, 7244, 5776, 9826, 7057, 9247, 5842, 5484, 6543, 5153, 6832, 8274
 */
 
 public class Kata {
-    public static long stairsIn20(int[][] stairs)
-    {
+    public static long stairsIn20(int[][] stairs) {
         long total = 0;
         for (int[] stair : stairs) {
             for (int i : stair) {
                 total += i;
             }
         }
-        return total;
+
+        return total * 20;
     }
 
     public static void main(String[] args) {
@@ -69,7 +69,7 @@ public class Kata {
                 5460, 9979, 5379, 8501, 6831, 7022, 7575, 5828, 5354, 5115, 9625, 7795, 7003,
                 5524, 9870, 6591, 8616, 5163, 6656, 8150, 8826, 6875, 5242, 9585, 9649, 9838,
                 7150, 6567, 8524, 7613, 7809, 5562, 7799, 7179, 5184, 7960, 9455, 5633, 9085};
-        int[][] stairs = {sunday,monday,tuesday,wednesday,thursday,friday,saturday};
+        int[][] stairs = {sunday, monday, tuesday, wednesday, thursday, friday, saturday};
 
         System.out.println(stairsIn20(stairs));
     }
