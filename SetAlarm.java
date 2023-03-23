@@ -18,6 +18,10 @@ public class SetAlarm {
         return employed && !vacation ? true : false;
     }
 
+/*  Best solution
+    return employed && !vacation;
+*/
+
     public static void main(String[] args) {
         System.out.println(setAlarm(true,true));
         System.out.println(setAlarm(false,true));
