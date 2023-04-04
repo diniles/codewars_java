@@ -15,12 +15,10 @@ public class ArrayPrinter {
 
     public static String printArray(Object[] array) {
         StringBuilder stringBuffer = new StringBuilder();
-        stringBuffer.append("\"");
         for (int i = 0; i < array.length; i++) {
             stringBuffer.append(array[i]);
             if (i < array.length - 1) stringBuffer.append(",");
         }
-        stringBuffer.append("\"");
         return stringBuffer.toString();
     }
 
