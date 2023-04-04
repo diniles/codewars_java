@@ -10,8 +10,6 @@ Output: String with comma delimited elements of the array in th same order.
 "h,o,l,a"
 */
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
 
 public class ArrayPrinter {
 
