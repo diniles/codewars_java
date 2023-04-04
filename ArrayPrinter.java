@@ -22,6 +22,19 @@ public class ArrayPrinter {
         return stringBuffer.toString();
     }
 
+/* Best practices
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
+    public class ArrayPrinter {
+
+        public static String printArray(Object[] array) {
+            return Arrays.stream(array).map(Object::toString).collect(Collectors.joining(","));
+        }
+    }
+*/
+
+
     public static void main(String[] args) {
         Integer[] array = new Integer[]{2, 4, 5, 2};
         System.out.println(printArray(array));
