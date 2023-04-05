@@ -31,6 +31,18 @@ public class SumArray {
         return sum;
     }
 
+/* Best practices
+import java.util.Arrays;
+
+    public class SumArray {
+
+        public static double sum(double[] numbers) {
+            return Arrays.stream(numbers).sum();
+        }
+}
+*/
+
+
     public static void main(String[] args) {
         double[] a1 = {1, 5.2, 4, 0, -1};
         double[] a2 = {};
