@@ -18,6 +18,19 @@ public class SmallestIntegerFinder {
         return smallest;
     }
 
+/*
+Best practices
+
+import java.util.stream.IntStream;
+
+public class SmallestIntegerFinder {
+    public static int findSmallestInt(int[] args) {
+        return IntStream.of(args).min().getAsInt();
+    }
+}
+
+*/
+
     public static void main(String[] args) {
         int[] a1 = {34, 15, 88, 2};
         int[] a2 = {34, -345, -1, 100};
