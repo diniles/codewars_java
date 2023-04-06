@@ -11,10 +11,21 @@ Examples (Input -> Output):
 
 public class DoubleChar {
     public static String doubleChar(String s) {
+/*
+Best practices
+return s.replaceAll(".", "$0$0");
+
+*/
         StringBuilder string = new StringBuilder();
         for (int i = 0; i < s.length(); i++) {
             string.append(s.charAt(i));
             string.append(s.charAt(i));
+
+/*
+Best practices
+            string.append(s.charAt(i)).append(s.charAt(i));
+*/
+
         }
         return string.toString();
     }
