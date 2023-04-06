@@ -19,6 +19,12 @@ public class QuarterOf {
             case 10, 11, 12 -> 4;
             default -> 0;
         };
+/*
+Best practices
+return (int) Math.ceil(month / 3.);
+
+
+*/
     }
 
     public static void main(String[] args) {
