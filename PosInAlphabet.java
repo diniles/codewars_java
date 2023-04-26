@@ -10,7 +10,7 @@ Ouput :: "Position of alphabet: 1"
 public class PosInAlphabet {
     public static String position(char alphabet) {
         int asciiCode = (int) alphabet - 96;
-        return Integer.toString(asciiCode);
+        return "Position of alphabet: " + Integer.toString(asciiCode);
     }
 
     public static void main(String[] args) {
