@@ -16,14 +16,19 @@ A string consists of lowercase latin letters, digits and symbols.
 */
 
 public class ReverseLetter {
+    //    public static String reverseLetter(final String str) {
+//        String result = "";
+//        for (int i = str.length() - 1; i >= 0; i--) {
+//            if (Character.isLetter(str.charAt(i))) {
+//                result += str.charAt(i);
+//            }
+//        }
+//        return result;
+//    }
+//
+//    best practice
     public static String reverseLetter(final String str) {
-        String result = "";
-        for (int i = str.length() - 1; i >= 0; i--) {
-            if (Character.isLetter(str.charAt(i))) {
-                result += str.charAt(i);
-            }
-        }
-        return result;
+        return new StringBuilder(str.replaceAll("[^a-zA-Z]", "")).reverse().toString();
     }
 
     public static void main(String[] args) {
