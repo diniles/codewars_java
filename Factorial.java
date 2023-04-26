@@ -12,15 +12,22 @@ IllegalArgumentException (Java) or RangeException (PHP) or throw a RangeError
 
 public class Factorial {
 
+//    public int factorial(int n) {
+//        // Happy coding :-)
+//        if (n < 0 || n > 12) throw new IllegalArgumentException("Number must be in range from 0 to 12");
+//        int fact = 1;
+//        while (n > 0) {
+//            fact *= n;
+//            n--;
+//        }
+//        return fact;
+//    }
+
+//    best practice
+
     public int factorial(int n) {
-        // Happy coding :-)
-        if (n < 0 || n > 12) throw new IllegalArgumentException("Number must be in range from 0 to 12");
-        int fact = 1;
-        while (n > 0) {
-            fact *= n;
-            n--;
-        }
-        return fact;
+        if (n < 0 || n > 12) throw new IllegalArgumentException("Wrong input range 0-12");
+        return n <= 1 ? 1 : n * factorial(n - 1);
     }
 
     public static void main(String[] args) {
