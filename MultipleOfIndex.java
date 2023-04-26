@@ -13,14 +13,23 @@ Some cases:
 
 import java.util.ArrayList;
 import java.util.Arrays;
+// for best practice
+import java.util.stream.*;
 
 public class MultipleOfIndex {
-    public static int[] multipleOfIndex(int[] array) {
+/*    public static int[] multipleOfIndex(int[] array) {
         ArrayList<Integer> list = new ArrayList<>();
         for (int i = 1; i < array.length; i++) {
             if (array[i] % i == 0) list.add(array[i]);
         }
         return list.stream().mapToInt(i -> i).toArray();
+    }
+    */
+
+//    best practice
+
+    public static int[] multipleOfIndex(int[] a) {
+        return IntStream.range(1, a.length).filter(i -> a[i] % i == 0).map(i -> a[i]).toArray();
     }
 
     public static void main(String[] args) {
