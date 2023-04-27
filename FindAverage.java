@@ -18,13 +18,22 @@ For an example list of 1, 3, 5, 7
 3. The mean (or average) of this list is 4
 */
 
+//for best practice
+
+import java.util.stream.IntStream;
+
 public class FindAverage {
+//    public static int findAverage(int[] nums) {
+//        int sum = 0;
+//        for (int num : nums) {
+//            sum += num;
+//        }
+//        return sum / nums.length;
+//    }
+
+    //best practice
     public static int findAverage(int[] nums) {
-        int sum = 0;
-        for (int num : nums) {
-            sum += num;
-        }
-        return sum / nums.length;
+        return IntStream.of(nums).sum() / nums.length;
     }
 
     public static void main(String[] args) {
