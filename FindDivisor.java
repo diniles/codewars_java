@@ -19,9 +19,8 @@ public class FindDivisor {
     public static long numberOfDivisors(int n) {
         // TODO please write your code below this comment
         long counter = 0L;
-        int middle = n;
-        for (int i = 1; i <= middle; i++) {
-            if (middle % i == 0) counter++;
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) counter++;
         }
         return counter;
     }
