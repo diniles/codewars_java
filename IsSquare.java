@@ -26,8 +26,13 @@ Examples
 */
 
 public class IsSquare {
+//    public static boolean isSquare(int n) {
+//        return Math.sqrt(n) == (int) Math.sqrt(n);
+//    }
+
+    //    best practice
     public static boolean isSquare(int n) {
-        return Math.sqrt(n) == (int) Math.sqrt(n);
+        return Math.sqrt(n) % 1 == 0;
     }
 
     public static void main(String[] args) {
