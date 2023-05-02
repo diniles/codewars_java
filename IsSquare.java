@@ -27,10 +27,7 @@ Examples
 
 public class IsSquare {
     public static boolean isSquare(int n) {
-//        int half = n / 2;
-//        return half * half == n;
         return Math.sqrt(n) == (int) Math.sqrt(n);
-
     }
 
     public static void main(String[] args) {
