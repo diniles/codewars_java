@@ -16,21 +16,26 @@ Your function should only return a number, not the explanation about how you get
 */
 
 public class GetSum {
-    public static int GetSum(int a, int b) {
-        int sum = 0;
-        if (a == b) {
-            return a;
-        } else if (a < b) {
-            for (int i = a; i <= b; i++) {
-                sum += i;
-            }
-        } else {
-            for (int i = b; i <= a; i++) {
-                sum += i;
-            }
+//    public static int GetSum(int a, int b) {
+//        int sum = 0;
+//        if (a == b) {
+//            return a;
+//        } else if (a < b) {
+//            for (int i = a; i <= b; i++) {
+//                sum += i;
+//            }
+//        } else {
+//            for (int i = b; i <= a; i++) {
+//                sum += i;
+//            }
+//
+//        }
+//        return sum;
+//    }
 
-        }
-        return sum;
+    //    best practice
+    public static int GetSum(int a, int b) {
+        return (a + b) * (Math.abs(a - b) + 1) / 2;
     }
 
     public static void main(String[] args) {
