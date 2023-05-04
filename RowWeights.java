@@ -17,9 +17,7 @@ Explanation:
 The first element 62 is the total weight of team 1, and the second element 27 is the total weight of team 2.
 */
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class RowWeights {
     public static int[] rowWeights(final int[] weights) {
