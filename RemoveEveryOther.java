@@ -11,6 +11,8 @@ None of the arrays will be empty, so you don't have to worry about that!
 
 import java.util.Arrays;
 import java.util.ArrayList;
+//for best practice
+import java.util.List;
 
 public class RemoveEveryOther {
 /*    public static Object[] removeEveryOther(Object[] arr) {
@@ -27,15 +29,13 @@ public class RemoveEveryOther {
 
     //    best practice
     public static Object[] removeEveryOther(Object[] arr) {
-        ArrayList<Object> list = new ArrayList<>();
-        for (int i = 0, j = 0; i < arr.length; i += 2, j++) {
-            list.add(arr[i]);
+        List<Object> list = new ArrayList<>();
+        for (int i = 0; i < arr.length; i++) {
+            if (i % 2 == 0) {
+                list.add(arr[i]);
+            }
         }
-        Object[] result = new Object[list.size()];
-        for (int i = 0; i < result.length; i++) {
-            result[i] = list.get(i);
-        }
-        return result;
+        return list.toArray();
     }
 
     public static void main(String[] args) {
