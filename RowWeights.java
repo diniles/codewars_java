@@ -30,8 +30,7 @@ public class RowWeights {
                 secondTeam += weights[i];
             }
         }
-        int[] teamsWeight = new int[]{firstTeam, secondTeam};
-        return teamsWeight;
+        return new int[]{firstTeam, secondTeam};
     }
 
     public static void main(String[] args) {
