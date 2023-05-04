@@ -13,6 +13,19 @@ import java.util.Arrays;
 import java.util.ArrayList;
 
 public class RemoveEveryOther {
+/*    public static Object[] removeEveryOther(Object[] arr) {
+        ArrayList<Object> list = new ArrayList<>();
+        for (int i = 0, j = 0; i < arr.length; i += 2, j++) {
+            list.add(arr[i]);
+        }
+        Object[] result = new Object[list.size()];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = list.get(i);
+        }
+        return result;
+    }*/
+
+    //    best practice
     public static Object[] removeEveryOther(Object[] arr) {
         ArrayList<Object> list = new ArrayList<>();
         for (int i = 0, j = 0; i < arr.length; i += 2, j++) {
