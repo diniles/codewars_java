@@ -14,24 +14,30 @@ If there are more than 6 petals, you start over with "I love you" for 7 petals, 
 
 public class HowMuchILoveYou {
 
-    public static String howMuchILoveYou(int nb_petals) {
-        int lastPetail;
-        if (nb_petals >= 6) {
-            lastPetail = nb_petals % 6;
-        } else {
-            lastPetail = nb_petals;
-        }
-        String phrase = "";
-        switch (lastPetail) {
-            case 0 -> phrase = "not at all";
-            case 1 -> phrase = "I love you";
-            case 2 -> phrase = "a little";
-            case 3 -> phrase = "a lot";
-            case 4 -> phrase = "passionately";
-            case 5 -> phrase = "madly";
+//    public static String howMuchILoveYou(int nb_petals) {
+//        int lastPetail;
+//        if (nb_petals >= 6) {
+//            lastPetail = nb_petals % 6;
+//        } else {
+//            lastPetail = nb_petals;
+//        }
+//        String phrase = "";
+//        switch (lastPetail) {
+//            case 0 -> phrase = "not at all";
+//            case 1 -> phrase = "I love you";
+//            case 2 -> phrase = "a little";
+//            case 3 -> phrase = "a lot";
+//            case 4 -> phrase = "passionately";
+//            case 5 -> phrase = "madly";
+//
+//        }
+//        return phrase;
+//    }
 
-        }
-        return phrase;
+    //    best practice
+    public static String howMuchILoveYou(int nb_petals) {
+        String[] arr = {"not at all", "I love you", "a little", "a lot", "passionately", "madly"};
+        return arr[nb_petals % 6];
     }
 
     public static void main(String[] args) {
