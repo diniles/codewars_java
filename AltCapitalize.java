@@ -17,18 +17,22 @@ public class AltCapitalize {
         String s2 = "";
         for (int i = 0; i < arr.length; i++) {
             if (i % 2 == 0) {
-                s1.concat(arr[i].toUpperCase());
+                arr[i] = arr[i].toUpperCase();
             } else {
-                s1.concat(arr[i].toLowerCase());
+                arr[i] = arr[i].toLowerCase();
             }
+            s1 += arr[i];
         }
+
         for (int i = 0; i < arr.length; i++) {
             if (i % 2 == 0) {
-                s2.concat(arr[i].toLowerCase());
+                arr[i] = arr[i].toLowerCase();
             } else {
-                s2.concat(arr[i].toUpperCase());
+                arr[i] = arr[i].toUpperCase();
             }
+            s2 += arr[i];
         }
+
         return new String[]{s1, s2};
     }
 
