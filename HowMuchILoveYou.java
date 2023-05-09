@@ -15,7 +15,7 @@ If there are more than 6 petals, you start over with "I love you" for 7 petals, 
 public class HowMuchILoveYou {
 
     public static String howMuchILoveYou(int nb_petals) {
-        int lastPetail = 0;
+        int lastPetail;
         if (nb_petals >= 6) {
             lastPetail = nb_petals % 6;
         } else {
