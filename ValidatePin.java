@@ -12,25 +12,20 @@ Examples (Input --> Output)
 
 public class ValidatePin {
     public static boolean validatePin(String pin) {
-        boolean result = false;
-        if (pin.length() == 4 || pin.length() == 6) {
-            try {
-                Integer.parseInt(pin);
-                result = true;
-            } catch (NumberFormatException e) {
-                System.out.println("You should enter numbers!");
-            }
-        }
-        return result;
+
+//        if (pin.length() == 4 || pin.length() == 6) {
+//            return pin.matches("[0-9]");
+//        }
+        return ((pin.length() == 4 || pin.length() == 6) && pin.matches("\\d+"));
     }
 
     public static void main(String[] args) {
         System.out.println(validatePin("1234"));
-        System.out.println(validatePin("0000"));
-        System.out.println(validatePin("1111"));
-        System.out.println(validatePin("123456"));
-        System.out.println(validatePin("098765"));
-        System.out.println(validatePin("000000"));
+        System.out.println(validatePin("a234"));
+        System.out.println(validatePin(".234"));
+        System.out.println(validatePin("1"));
+        System.out.println(validatePin("123"));
+        System.out.println(validatePin("-123"));
         System.out.println(validatePin("090909"));
     }
 }
