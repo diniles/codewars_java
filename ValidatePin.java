@@ -12,11 +12,9 @@ Examples (Input --> Output)
 
 public class ValidatePin {
     public static boolean validatePin(String pin) {
-
-//        if (pin.length() == 4 || pin.length() == 6) {
-//            return pin.matches("[0-9]");
-//        }
-        return ((pin.length() == 4 || pin.length() == 6) && pin.matches("\\d+"));
+//        return ((pin.length() == 4 || pin.length() == 6) && pin.matches("\\d+"));
+//        best practice
+        return pin.matches("\\d{4}|\\d{6}");
     }
 
     public static void main(String[] args) {
