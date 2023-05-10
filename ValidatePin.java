@@ -15,7 +15,7 @@ public class ValidatePin {
         boolean result = false;
         if (pin.length() == 4 || pin.length() == 6) {
             try {
-                int x = Integer.parseInt(pin);
+                Integer.parseInt(pin);
                 result = true;
             } catch (NumberFormatException e) {
                 System.out.println("You should enter numbers!");
