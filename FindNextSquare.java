@@ -15,10 +15,16 @@ Examples:(Input --> Output)
 */
 
 public class FindNextSquare {
+//    public static long findNextSquare(long sq) {
+//        double sqrt = Math.sqrt(sq);
+//        double x = sqrt % 1;
+//        return x > 0 ? -1 : (long) (Math.pow((sqrt + 1), 2));
+//    }
+
+    //    best practice
     public static long findNextSquare(long sq) {
-        double sqrt = Math.sqrt(sq);
-        double x = sqrt % 1;
-        return x > 0 ? -1 : (long) (Math.pow((sqrt + 1), 2));
+        long root = (long) Math.sqrt(sq);
+        return root * root == sq ? (root + 1) * (root + 1) : -1;
     }
 
     public static void main(String[] args) {
