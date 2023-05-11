@@ -14,7 +14,6 @@ point to the given array!
 
 public class BetterThanAverage {
     public static boolean betterThanAverage(int[] classPoints, int yourPoints) {
-        // Your code here
         double sum = yourPoints;
         for (double element : classPoints) {
             sum += element;
