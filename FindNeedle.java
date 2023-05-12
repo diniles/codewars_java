@@ -15,11 +15,13 @@ Example(Input --> Output)
 */
 public class FindNeedle {
     public static String findNeedle(Object[] haystack) {
-        int position = 0;
-        for (int i = 0; i < haystack.length; i++) {
-            if (haystack[i] == "needle") position = i;
-        }
-        String result = "found the needle at position " + position;
-        return result;
+//        int position = 0;
+//        for (int i = 0; i < haystack.length; i++) {
+//            if (haystack[i] == "needle") position = i;
+//        }
+//        String result = "found the needle at position " + position;
+//        return result;
+//        best practice
+        return String.format("found the needle at position %d", java.util.Arrays.asList(haystack).indexOf("needle"));
     }
 }
