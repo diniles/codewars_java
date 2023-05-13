@@ -12,9 +12,11 @@ package InvertValues;
 
 public class Kata {
     public static int[] invert(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            array[i] = array[i] * (-1);
-        }
-        return array;
+//        for (int i = 0; i < array.length; i++) {
+//            array[i] = array[i] * (-1);
+//        }
+//        return array;
+//        best practice
+        return java.util.Arrays.stream(array).map(i -> -i).toArray();
     }
 }
