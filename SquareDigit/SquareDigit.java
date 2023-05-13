@@ -10,18 +10,28 @@ Note: The function accepts an integer and returns an integer.
 */
 
 package SquareDigit;
+//for best practice
+
+import java.util.stream.Collectors;
 
 public class SquareDigit {
     public int squareDigits(int n) {
-        String s = Integer.toString(n);
-        String[] input = s.split("");
-        String result = "";
-
-        for (int i = 0; i < input.length; i++) {
-            int tmp = Integer.parseInt(input[i]);
-            result += Integer.toString(tmp * tmp);
-        }
-        return Integer.parseInt(result);
+//        String s = Integer.toString(n);
+//        String[] input = s.split("");
+//        String result = "";
+//
+//        for (int i = 0; i < input.length; i++) {
+//            int tmp = Integer.parseInt(input[i]);
+//            result += Integer.toString(tmp * tmp);
+//        }
+//        return Integer.parseInt(result);
+//        best practice
+        return Integer.parseInt(String.valueOf(n)
+                .chars()
+                .map(i -> Integer.parseInt(String.valueOf((char) i)))
+                .map(i -> i * i)
+                .mapToObj(String::valueOf)
+                .collect(Collectors.joining("")));
     }
 }
 
