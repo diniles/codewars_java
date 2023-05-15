@@ -19,12 +19,16 @@ Output: "even"
 
 package OddOrEven;
 
+import static java.util.Arrays.stream;
+
 public class OddOrEven {
     public static String oddOrEven(int[] array) {
-        int sum = 0;
-        for (int el : array) {
-            sum += el;
-        }
-        return sum % 2 == 0 ? "even" : "odd";
+//        int sum = 0;
+//        for (int el : array) {
+//            sum += el;
+//        }
+//        return sum % 2 == 0 ? "even" : "odd";
+//        best practice
+        return stream(array).sum() % 2 == 0 ? "even" : "odd";
     }
 }
