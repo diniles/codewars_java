@@ -10,6 +10,9 @@ package greet;
 
 public class Kata {
     public static String greet(String name) {
-        return "Hello, " + name + " how are you doing today?";
+//        return "Hello, " + name + " how are you doing today?";
+
+//        best practice
+        return String.format("Hello, %s how are you doing today?", name);
     }
 }
