@@ -12,15 +12,28 @@ countBy(2,5)  // should return {2,4,6,8,10}
 */
 
 package countBy;
+// for best practice 1
+
+//import java.util.stream.IntStream;
 
 public class CountBy {
     public static int[] countBy(int x, int n) {
-        int[] array = new int[n];
-        int counter = x;
-        for (int i = 0; i < n; i++) {
-            array[i] = x;
-            x += counter;
-        }
-        return array;
+//        int[] array = new int[n];
+//        int counter = x;
+//        for (int i = 0; i < n; i++) {
+//            array[i] = x;
+//            x += counter;
+//        }
+//        return array;
+
+//        best practice 1
+//        return IntStream.rangeClosed(1, n)
+//                .map(i -> i * x)
+//                .toArray();
+
+//        best practice 2
+        int[] el = new int[n];
+        for (int i = 0; i < n; i++) el[i] = x * (i + 1);
+        return el;
     }
 }
