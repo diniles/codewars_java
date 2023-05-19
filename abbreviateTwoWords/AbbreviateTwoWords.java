@@ -15,7 +15,7 @@ package abbreviateTwoWords;
 
 public class AbbreviateTwoWords {
     public static String abbrevName(String name) {
-        String result = name.charAt(0) + "." + name.charAt(name.indexOf(' ') + 1);
-        return result.toUpperCase();
+        return (name.charAt(0) + "." + name.charAt(name.indexOf(' ') + 1)).toUpperCase();
+
     }
 }
