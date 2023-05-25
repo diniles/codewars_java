@@ -16,6 +16,8 @@ package returnNegative;
 
 public class ReturnNegative {
     public static int makeNegative(final int x) {
-        return (x > 0) ? (x * -1) : x;
+//        return (x > 0) ? (x * -1) : x;
+//        best practice
+        return -Math.abs(x);
     }
 }
