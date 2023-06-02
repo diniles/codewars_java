@@ -38,8 +38,8 @@ public class HumanYearsCatYearsDogYears {
                 years[2] = 24;
             }
             default -> {
-                years[1] = 24 + (humanYears - 24) * 4;
-                years[2] = 24 + (humanYears - 24) * 5;
+                years[1] = 24 + (humanYears - 2) * 4;
+                years[2] = 24 + (humanYears - 2) * 5;
             }
         }
         return years;
