@@ -29,9 +29,9 @@ public class HumanYearsCatYearsDogYears {
         switch (humanYears) {
             case 0 -> {
             }
-            case 15 -> {
-                years[1] = 1;
-                years[2] = 1;
+            case 1 -> {
+                years[1] = 15;
+                years[2] = 15;
             }
             case 2 -> {
                 years[1] = 24;
