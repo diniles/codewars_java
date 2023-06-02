@@ -24,24 +24,39 @@ package humanYearsCatYearsDogYears;
 
 public class HumanYearsCatYearsDogYears {
     public static int[] humanYearsCatYearsDogYears(final int humanYears) {
-        int[] years = new int[3];
-        years[0] = humanYears;
+        //best practice
+        int catYears = 0, dogYears = 0;
         switch (humanYears) {
-            case 0 -> {
-            }
-            case 1 -> {
-                years[1] = 15;
-                years[2] = 15;
-            }
-            case 2 -> {
-                years[1] = 24;
-                years[2] = 24;
-            }
-            default -> {
-                years[1] = 24 + (humanYears - 2) * 4;
-                years[2] = 24 + (humanYears - 2) * 5;
-            }
+            default:
+                catYears = 4 * (humanYears - 2);
+                dogYears = 5 * (humanYears - 2);
+            case 2:
+                catYears += 9;
+                dogYears += 9;
+            case 1:
+                catYears += 15;
+                dogYears += 15;
         }
-        return years;
+        return new int[]{humanYears, catYears, dogYears};
+
+//        int[] years = new int[3];
+//        years[0] = humanYears;
+//        switch (humanYears) {
+//            case 0 -> {
+//            }
+//            case 1 -> {
+//                years[1] = 15;
+//                years[2] = 15;
+//            }
+//            case 2 -> {
+//                years[1] = 24;
+//                years[2] = 24;
+//            }
+//            default -> {
+//                years[1] = 24 + (humanYears - 2) * 4;
+//                years[2] = 24 + (humanYears - 2) * 5;
+//            }
+//        }
+//        return years;
     }
 }
