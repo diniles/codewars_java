@@ -1,7 +1,7 @@
 package xor;
 
+
 import org.junit.jupiter.api.Test;
-import xor.Xor;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
