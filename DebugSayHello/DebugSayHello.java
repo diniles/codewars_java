@@ -14,6 +14,6 @@ package DebugSayHello;
 
 public class DebugSayHello {
     public static String sayHello(String name) {
-        return "Hello"
+        return "Hello " + name;
     }
 }
