@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SolutionTest {
 
-    private Kata kata = new Kata();
+    private final Kata kata = new Kata();
 
     @Test
     public void testExamples() {
