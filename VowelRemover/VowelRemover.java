@@ -13,7 +13,6 @@ package VowelRemover;
 
 public class VowelRemover {
     public static String shortcut(String input) {
-        String vowelsLowerCase = "[aeiou]";
-        return input.replaceAll(vowelsLowerCase, "");
+        return input.replaceAll("[aeiou]", "");
     }
 }
