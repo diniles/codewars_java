@@ -11,9 +11,9 @@ The tests contain some very huge arrays, so think about performance.
 This is the first kata in series:
 
 Find the unique number (this kata)
-Find the unique string
+Find the unique string - JS(
 https://www.codewars.com/kata/585d8c8a28bc7403ea0000c3
-Find The Unique
+Find The Unique - JS(
 https://www.codewars.com/kata/5862e0db4f7ab47bed0000e5
 */
 
