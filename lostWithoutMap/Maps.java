@@ -9,12 +9,16 @@ For example:
 
 package lostWithoutMap;
 
+import java.util.Arrays;
+
 public class Maps {
     public static int[] map(int[] arr) {
-        int[] result = new int[arr.length];
-        for (int i = 0; i < arr.length; i++) {
-            result[i] = arr[i] * 2;
-        }
-        return result;
+//        int[] result = new int[arr.length];
+//        for (int i = 0; i < arr.length; i++) {
+//            result[i] = arr[i] * 2;
+//        }
+//        return result;
+
+        return Arrays.stream(arr).map(x -> x * 2).toArray();
     }
 }
