@@ -20,18 +20,26 @@ package nthSeries;
 
 public class NthSeries {
     public static String seriesSum(int n) {
-        String result = "";
-        double sum = 1;
-        if (n == 0) {
-            result = "0.00";
-        } else if (n == 1) {
-            result = "1.00";
-        } else {
-            for (int i = 4; i < n * 3; i = i + 3) {
-                sum += (double) 1 / i;
-            }
-            result += String.format("%.2f", sum);
-        }
-        return result;
+
+//        best practice
+        double sum = 0.0;
+        for (int i = 0; i < n; i++)
+            sum += 1.0 / (1 + 3 * i);
+
+        return String.format("%.2f", sum);
+
+//        String result = "";
+//        double sum = 1;
+//        if (n == 0) {
+//            result = "0.00";
+//        } else if (n == 1) {
+//            result = "1.00";
+//        } else {
+//            for (int i = 4; i < n * 3; i = i + 3) {
+//                sum += (double) 1 / i;
+//            }
+//            result += String.format("%.2f", sum);
+//        }
+//        return result;
     }
 }
